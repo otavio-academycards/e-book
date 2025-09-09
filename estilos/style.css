@@ -205,19 +205,12 @@ div.form-wrap{
 }
 
 .button{
-    display: flex;
-    flex-flow: row wrap;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
 }
 
-.btn-primary{ flex: 0 0 auto; }
-
 .btn-primary{
-    white-space: nowrap;
-    word-break: keep-all;
-    overflow-wrap: normal;
-    hyphens: none;
     padding: 12px 29px;
     border:0;
     border-radius:999px;
@@ -229,9 +222,6 @@ div.form-wrap{
     margin-right: 15px;
     line-height: 20px;
     min-height: 50px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
     cursor:pointer;
     transition: transform .06s ease, filter .2s ease;
 }
@@ -276,6 +266,8 @@ footer p {
     color: #fff;
     font-size: 12px;
 }
+
+html { scroll-behavior: smooth; }
 
 /*
     Paleta de cores:
