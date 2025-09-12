@@ -93,7 +93,7 @@ div#texto-inicio {
 }
 
 div#titulo-subtitulo {
-    width: 55vw;
+    width: 70vw;
     max-width: 380px;
 }
 
@@ -165,8 +165,8 @@ div.blocos-capitulos {
   transform: none;
 }
 /* alterna lado automaticamente */
-.blocos-capitulos .bloco:nth-child(odd).reveal { --offset: -80px; }
-.blocos-capitulos .bloco:nth-child(even).reveal { --offset:  80px; }
+.blocos-capitulos .bloco:nth-child(odd).reveal { --offset: -28px; }
+.blocos-capitulos .bloco:nth-child(even).reveal { --offset:  28px; }
 
 div.bloco {
     background-color: #fff;
