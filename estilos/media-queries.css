@@ -4,7 +4,7 @@
     div#texto-inicio {
         flex-flow: row nowrap;
         align-items: center;
-        justify-content: space-evenly;
+        justify-content: center;
     }
 
     div#texto-inicio > img {
@@ -15,21 +15,32 @@
     div.bloco {
         padding: 25px;
     }
+
+    div#titulo-subtitulo {
+    width: 60vw;
+    max-width: 380px;
+    }
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
     div#texto-inicio {
         flex-flow: row nowrap;
         align-items: center;
-        justify-content: space-evenly;
+        justify-content: center;
     }
 
     div#texto-inicio > img {
         max-height: 350px;
+        margin-left: 50px;
     }
     
     div.bloco {
         padding: 25px;
+    }
+
+    div#titulo-subtitulo {
+    width: 65vw;
+    max-width: 380px;
     }
 }
 
@@ -37,11 +48,12 @@
     div#texto-inicio {
         flex-flow: row nowrap;
         align-items: center;
-        justify-content: space-evenly;
+        justify-content: center;
     }
 
     div#texto-inicio > img {
         max-height: 350px;
+        margin-left: 90px;
     }
     
     div.bloco {
@@ -53,5 +65,10 @@
     border-radius: 8px;
     background: #E7F7FF;
     padding: 25px 30px 30px;
+    }
+
+    div#titulo-subtitulo {
+    width: 65vw;
+    max-width: 480px;
     }
 }

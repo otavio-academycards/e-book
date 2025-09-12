@@ -246,5 +246,25 @@
     })();
     </script>
 
+    <script>
+    (function(){
+        // marca os blocos para revelar
+        document.querySelectorAll('.blocos-capitulos .bloco')
+            .forEach(el => el.classList.add('reveal'));
+
+        // observa entrada no viewport e ativa uma vez
+        const io = new IntersectionObserver((entries)=>{
+            entries.forEach(e=>{
+            if (e.isIntersecting){
+                e.target.classList.add('in-view');
+                io.unobserve(e.target);
+            }
+            });
+        }, { threshold: 0.2, rootMargin: '0px 0px -10% 0px' });
+
+        document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+    })();
+    </script>
+
 </body>
 </html>
