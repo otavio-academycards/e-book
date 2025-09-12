@@ -23,7 +23,7 @@
   --font-heading: "Poppins", var(--font-body);
 }
 html{ font-family: var(--font-body); line-height:1.4; }
-h1,h2,h3,.btn-primary{ font-family: var(--font-heading); letter-spacing:.1px; }
+h1,h2,h3,h4,.btn-primary{ font-family: var(--font-heading); letter-spacing:.1px; }
 
 #inicio, #capitulos{
   padding-bottom: 30px;      /* ajuste o valor que preferir */
@@ -40,7 +40,7 @@ div.cta-row a{
     width: fit-content;
     color:#fff;
     font-weight:700;
-    font-size: 14px;
+    font-size: clamp(14px, 12px + 0.4vw, 18px);
     letter-spacing:.5px;
     padding: 12px 29px;
     border:0;
@@ -109,8 +109,13 @@ div#texto-inicio {
     padding: 0px 40px 0px 40px;
 }
 
+div#titulo-subtitulo {
+    width: 55vw;
+    max-width: 380px;
+}
+
 span.header {
-    font-size: 25px;
+    font-size: clamp(25px, 23px + 1vw, 38px);
     text-shadow: #001a27a6 2px 2px 2px;
 }
 
@@ -118,49 +123,31 @@ h1.fundo-escuro {
     color: #fff;
     padding-bottom: 15px;
     text-align: center;
-    font-size: 22px;
-    line-height: 1.4em;
-    width: 70vw;
+    font-size: clamp(22px, 20px + 1vw, 32px);
+    line-height: 1.6em;
+    margin: auto;
 }
 
 p#texto-no-inicio {
     text-align: center;
-    font-size: 1em;
-    line-height: 1.6em;
+    font-size: clamp(15px, 15px + 0.2vw, 18px);
+    line-height: 1.5em;
     color: #fff;
     padding-bottom: 30px;
 }
 
 div#texto-inicio > img {
-    width: 45vw; 
-    height: auto;
+    max-height: 300px;
     padding-bottom: 25px;
 }
 
 h2 {
     text-align: center;
-    font-size: 22px;
+    font-size: clamp(22px, 20px + 0.7vw, 35px);
     font-weight: bolder;
     line-height: 1.4em;
     color: #001A27;
     margin: auto;
-}
-
-h3 {
-    text-align: center;
-    padding: 10px;
-    color: #001A27;
-}
-
-section {
-    background-color: #00273B;
-}
-
-.ph--square{
-  width:70px;
-  height:70px;             
-  background:#434344;      
-  border-radius:8px; 
 }
 
 section#capitulos {
@@ -188,57 +175,78 @@ div.bloco {
     border-radius: 8px;
     width: 70vw;
     box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.315);
-    max-width: 600px;
+    max-width: 700px;
+}
+
+div.bloco:hover {
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.315);
+    transform: scale(1.02);
+    transition: transform .06s ease, filter .2s ease;
 }
 
 div.titulo-capitulo {
     display: flex;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
 }
+
+div.titulo-capitulo-texto {
+    margin-left: 15px;
+}
+
+h3 {
+    color: #001A27;
+    display: block;
+    font-size: clamp(18px, 16px + 0.8vw, 20px);
+}
+
+h4 {
+    font-size: clamp(16px, 15px + 0.6vw, 18px);
+    font-weight: normal;
+    color: #001A27;
+    display: block;
+}
+
 
 div > p {
-    font-size: 13px;
+    font-size: clamp(13px, 11px + 0.4vw, 16px);
     line-height: 1.8em;
-    color: #001A27;
-}
-
-span.capitulos {
-    font-size: 16px;
-    font-weight: normal;
     color: #001A27;
 }
 
 section#form {
     background-color: #3FBFFF;
     padding: 32px 20px 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-form#ebook-form{
+form#ebook-forms{
     width: 100%;
-    max-width: 600px;
+    max-width: 580px;
 }
 
 div.form-wrap{
     width: 70vw;
+    max-width: 630px;
     display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
-    margin: auto;
+    align-items: center;
 }
 
 .form-title{
     text-align: center;
     color:#001A27;
     margin-bottom: 15px;
-    font-size: 1.5em;
+    font-size: clamp(22px, 20px + 0.7vw, 35px);
 }
 
 p#texto-no-form {
     text-align: center;
     color:#001A27;
-    font-size: 0.9em;
+    font-size: clamp(15px, 11px + 0.4vw, 17px);
     margin-bottom: 20px;
 }
 
@@ -247,7 +255,6 @@ p#texto-no-form {
 }
 
 .field label{
-    display:block;
     margin-bottom: 6px;
     font-size: 14px;
     color:#001A27;
@@ -272,6 +279,7 @@ p#texto-no-form {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
 }
 
 .btn-primary{
@@ -281,6 +289,7 @@ p#texto-no-form {
     background:#00273B;
     color:#fff;
     font-weight:700;
+    font-size: clamp(14px, 12px + 0.4vw, 18px);
     letter-spacing:.5px;
     text-transform:uppercase;
     margin-right: 15px;

@@ -1,11 +1,57 @@
 @charset "UTF-8";
 
-/*
-div.form-wrap{
+@media screen and (min-width: 600px) and (max-width: 768px) {
+    div#texto-inicio {
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    div#texto-inicio > img {
+        max-height: 300px;
+        margin-left: 20px;
+    }
+    
+    div.bloco {
+        padding: 25px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    div#texto-inicio {
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    div#texto-inicio > img {
+        max-height: 350px;
+    }
+    
+    div.bloco {
+        padding: 25px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    div#texto-inicio {
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    div#texto-inicio > img {
+        max-height: 350px;
+    }
+    
+    div.bloco {
+        padding: 25px;
+    }
+
+    div.form-wrap{
     border: #0074AD 2px solid;
     border-radius: 8px;
     background: #E7F7FF;
     padding: 25px 30px 30px;
+    }
 }
-
-*/
