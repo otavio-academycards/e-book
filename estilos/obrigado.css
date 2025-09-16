@@ -33,6 +33,7 @@ body {
 /* layout */
 
 .container {
+  width: 90vw;
   max-width: 960px;
   margin-left: auto;
   margin-right: auto;
@@ -45,15 +46,18 @@ body {
   text-align: center;
   padding-top: 16px;
   padding-bottom: 8px;
+  max-width: 700px;
+  margin: auto;
 }
 
 .thanks h1 {
   margin: 0 0 8px 0;
-  font-size: clamp(24px, 4vw, 36px);
+  font-size: clamp(24px, 2vw, 36px);
 }
 
 .thanks p {
   margin: 0;
+  font-size: clamp(16px, 1.3vw, 17px);
 }
 
 /* vídeo */
@@ -69,6 +73,8 @@ body {
   background: #E7F7FF;
   border-radius: 12px;
   overflow: hidden;
+  max-width: 700px;
+  margin: auto;
 }
 
 .video-frame iframe {
@@ -86,12 +92,19 @@ body {
   margin-bottom: 8px;
 }
 
+.tip p {
+  margin: 0;
+  font-size: clamp(16px, 1.3vw, 17px);
+  color: #555;
+}
+
 /* redes sociais */
 
 .social {
   text-align: center;
   padding-top: 24px;
   padding-bottom: 32px;
+  margin: auto;
 }
 
 .social h2 {
@@ -101,18 +114,18 @@ body {
 
 .social p {
   margin: 0 0 16px 0;
+  font-size: clamp(16px, 1.3vw, 17px);
 }
 
-/* GRID DE CARDS */
+/* FLEXBOX DE CARDS */
 .social-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
-  max-width: 960px;
-  margin-left: auto;
-  margin-right: auto;
+  display: flex;
+  flex-flow: row wrap;
   padding-left: 16px;
   padding-right: 16px;
+  align-items: center;
+  gap: 16px;
+  justify-content: center;
 }
 
 @media (max-width: 900px) {
@@ -127,14 +140,27 @@ body {
   border: 1px solid rgba(0,0,0,.06);
   border-radius: 14px;
   padding: 16px;
-  text-align: left;
+  text-align: center;
   box-shadow: 0 10px 22px rgba(0,0,0,.06);
   transition: transform .08s ease, box-shadow .2s ease;
+  flex: 1 1 250px;
+  max-width: 300px;
+}
+
+@media (min-width: 1200px) {
+  .social-card {
+    max-width: 360px;
+  }
 }
 
 .social-card:hover {
   transform: translateY(-2px);
   box-shadow: 0 14px 28px rgba(0,0,0,.10);
+}
+
+article.social-card:active {
+  transform: translateY(1px);
+  box-shadow: 0 8px 16px rgba(0,0,0,.06);
 }
 
 .sc-head {
@@ -172,6 +198,7 @@ body {
   color: #ffffff;
   background: var(--brand, #3FBFFF);
   transition: filter .2s ease, transform .06s ease;
+  width: 185px;
 }
 
 .sc-btn:hover {
@@ -186,16 +213,19 @@ body {
 .social-card.ig {
   --brand: linear-gradient(90deg,#F58529,#DD2A7B,#8134AF,#515BD4);
   color: #DD2A7B;
+  flex: auto;
 }
 
 .social-card.tt {
   --brand: #111111;
   color: #111111;
+  flex: auto;
 }
 
 .social-card.fb {
   --brand: #1877F2;
   color: #1877F2;
+  flex: auto;
 }
 
 /* BARRA SUPERIOR DESTAQUE (opcional, deixe ligado se curtir) */
