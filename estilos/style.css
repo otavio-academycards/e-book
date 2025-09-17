@@ -94,7 +94,6 @@ div#texto-inicio {
 
 div#titulo-subtitulo {
     width: 70vw;
-    max-width: 380px;
 }
 
 span.header {
@@ -119,9 +118,11 @@ p#texto-no-inicio {
     padding-bottom: 30px;
 }
 
-div#texto-inicio > img {
-    max-height: 300px;
-    padding-bottom: 25px;
+iframe {
+    width: 90vw;
+    aspect-ratio: 16 / 9;
+    height: auto;
+    border: none; 
 }
 
 h2 {
